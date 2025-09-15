@@ -12,14 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Aditi Thakre Portfolio",
   description: "Aditi is a Data Engineer & ML Enthusiast with 2+ years of experience.",
-  openGraph: {
-    title: "Aditi Thakre Portfolio",
-    description: "Aditi is a Data Engineer & ML Enthusiast with 2+ years of experience.",
-    images: [], // <-- no image so no auto screenshot preview
-  },
-  twitter: {
-    card: "summary", // smaller card, no large image
-  },
+  openGraph: { title: "Aditi Thakre Portfolio" },
 };
 
 export default function RootLayout({
