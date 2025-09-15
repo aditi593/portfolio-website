@@ -149,7 +149,7 @@ export const projectsData = [
       "Natural language → SQL conversion with Streamlit UI and FastAPI backend using a fine-tuned T5 transformer.",
     tags: ["Python", "Streamlit", "FastAPI", "SQL", "GNN"],
     githubUrl: "https://github.com/aditi593/Natural-Language-to-SQL-Copilot",
-    imageUrl: "/projects/screenshot2.png",       // ✅ add image to /public/projects/
+    imageUrl: "/projects/Screenshot2.png",       // ✅ add image to /public/projects/
   },
   {
     title: "Hand Sanitizer & Mask Detector",
