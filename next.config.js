@@ -1,16 +1,12 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  images: {
-    remotePatterns: [
+module.exports = {
+  async headers() {
+    return [
       {
-        protocol: "https",
-        hostname: "images.unsplash.com",
+        source: '/images/(.*)',   // adjust to your image folder
+        headers: [
+          { key: 'X-Robots-Tag', value: 'noimageindex' },
+        ],
       },
-    ],
+    ]
   },
-  experimental: {
-    serverActions: true,
-  },
-};
-
-module.exports = nextConfig;
+}
