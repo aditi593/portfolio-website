@@ -229,24 +229,31 @@ export const accoladesData = [
   },
 ] as const;
 // ---------- LICENSES & CERTIFICATIONS ----------
-export const certificationsData = [
+// lib/data.ts
+export type Certification = {
+  title: string;
+  url: string;
+};
+
+export const certificationsData: Certification[] = [
   {
     title: "Computer Communications Specialization",
-    url: "https://www.coursera.org/account/accomplishments/certificate/T59L5346ES5C"
+    url: "https://www.coursera.org/account/accomplishments/certificate/T59L5346ES5C",
   },
   {
     title: "Complete Python Bootcamp: From Zero to Hero in Python",
-    url: "https://www.udemy.com/certificate/UC-e560fe00-a802-40db-97c6-0e574552879f"
+    url: "https://www.udemy.com/certificate/UC-e560fe00-a802-40db-97c6-0e574552879f",
   },
   {
     title: "Applied Plotting, Charting & Data Representation in Python",
-    url: "https://www.coursera.org/account/accomplishments/certificate/9C9YYX2S4DQ5"
+    url: "https://www.coursera.org/account/accomplishments/certificate/9C9YYX2S4DQ5",
   },
   {
     title: "Deep Learning using Python – NIELIT",
-    url: "https://drive.google.com/file/d/14HdQQqFxL3z050VGRzuBK_PweMJicgMi/view?usp=sharing" // add actual credential link if available
-  }
-] as const;
+    url: "https://drive.google.com/file/d/14HdQQqFxL3z050VGRzuBK_PweMJicgMi/view?usp=sharing",
+  },
+];
+
 
 // ---------- EDUCATION ----------
 export const educationData = [

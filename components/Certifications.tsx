@@ -12,27 +12,35 @@ export default function Certifications() {
         Licenses & Certifications
       </h2>
 
-      {/* ✅ Flex row: wraps if screen is too small */}
-      <ul className="flex flex-wrap justify-center gap-6">
+      <ul className="flex flex-wrap justify-center gap-8">
         {certificationsData.map((cert, index) => (
           <li
             key={index}
-            className="w-64 rounded-xl bg-white p-6 shadow-md dark:bg-gray-800 dark:text-white
-                       transition hover:-translate-y-1 hover:shadow-lg text-center"
+            className="w-72 sm:w-64 group"
           >
             {cert.url ? (
               <a
                 href={cert.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block font-semibold text-gray-800 dark:text-white hover:text-purple-500 dark:hover:text-purple-400"
+                className="block h-full rounded-xl bg-white dark:bg-gray-800 shadow-md 
+                           p-6 text-center transition-all duration-300
+                           hover:scale-105 hover:shadow-xl dark:text-white"
               >
-                {cert.title}
+                <span className="block font-semibold text-gray-800 dark:text-white 
+                                  group-hover:text-purple-500 dark:group-hover:text-purple-400">
+                  {cert.title}
+                </span>
               </a>
             ) : (
-              <span className="block font-semibold text-gray-800 dark:text-white">
-                {cert.title}
-              </span>
+              <div
+                className="block h-full rounded-xl bg-white dark:bg-gray-800 shadow-md 
+                           p-6 text-center dark:text-white"
+              >
+                <span className="block font-semibold text-gray-800 dark:text-white">
+                  {cert.title}
+                </span>
+              </div>
             )}
           </li>
         ))}
