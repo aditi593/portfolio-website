@@ -48,7 +48,18 @@ export const links = [
 
 
 
-export const experiencesData = [
+// lib/data.ts
+export type Experience = {
+  title: string
+  company: string
+  companyUrl?: string
+  location: string
+  date: string
+  logo: string
+  points: string[]
+}
+
+export const experiencesData: Experience[] = [
   {
     title: "Analytics Representative",
     company: "Arizona State University",
@@ -124,7 +135,8 @@ export const experiencesData = [
       "Promoted data-science competitions to 500+ students and maintained outreach analytics with Google Sheets and Python."
     ]
   }
-] as const;
+]
+
 
 
 
